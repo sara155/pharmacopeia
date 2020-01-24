@@ -1,0 +1,17 @@
+.table input {
+  display: inline-block;
+  background-color: #e6f0ee;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  margin-right: 15px;
+  -webkit-box-shadow: 2px 2px 4px #cfd8dc;
+          box-shadow: 2px 2px 4px #cfd8dc;
+  padding: 6px;
+  width: 13%;
+  font-family: 'Cairo', sans-serif;
+
+}
+
+

@@ -1,0 +1,17 @@
+{
+  "name": "printjs-onprintdialogclose",
+  "version": "1.0.0",
+  "description": "Print.js onPrintDialogClose example",
+  "main": "invoice.html",
+  "scripts": {
+    "start": "parcel invoice.html --open",
+    "build": "parcel build invoice.html"
+  },
+  "dependencies": {
+    "print-js": "1.0.52"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": []
+}

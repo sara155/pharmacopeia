@@ -1,0 +1,95 @@
+*{
+     
+  direction: rtl;
+}
+
+body{
+  overflow: hidden;
+  font-family: 'Cairo', sans-serif;
+}
+
+
+.front {
+  display: inline;
+  
+}
+
+
+.img {
+    position: relative;
+    height: 70vh; 
+    width: auto;
+    float: left;
+    padding: 30px 20px 30px 110px;
+    
+    margin: 10vh 0 0 10vh;
+
+
+}
+
+@media only screen and (max-width:1600px)
+{
+  .img{
+    width:37%;
+    height: auto;
+    
+
+  }
+}
+
+
+.in-label{
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+.loginbox {
+   
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 5px 5px 25px rgb(194, 196, 197);
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    background-color: #EEF0F1;
+    position :absolute  ;
+    right: 15%;
+    top :20%
+    
+}
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Cairo', sans-serif;
+    
+  }
+  
+  .sign-in-button {
+    background-color: #2C6C70;
+    color: white;
+    border-radius: 4px;
+    padding: 12px 20px;
+    margin: 30px 0 8px 20px;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    font-size: .9rem;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #6CA39A;
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 8px #2C6C70;
+    
+  }
+  
+  form container label b {
+    text-align: center;
+  }
