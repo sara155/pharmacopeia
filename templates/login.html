@@ -1,0 +1,39 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login form design </title>
+      <link rel="stylesheet" type= "text/css"  href="{{ url_for('static', filename='login.css') }}">
+      <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <form action="/login" method="post">
+
+    <div class="container">
+
+        <div class= "front">
+            <img class="img" src="{{ url_for('static', filename='pharmacy.png') }}" width="500px" alt="pharmacy">
+      </div>
+    <div class="loginbox">
+
+            <div class="form-container">
+              <label class="in-label" for="name"><b>الاسم</b></label>
+              <input type="text" placeholder="ادخل اسم المستخدم" name="username" required>
+
+              <label class="in-label" for="psw"><b>كلمة المرور</b></label>
+              <input type="password" placeholder="ادخل كلمة المرور" name="password" required>
+
+              <button class="sign-in-button" type="submit">تسجيل دخول</button>
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+    </div>
+
+
+
+    </div>
+
+  </form>
+  </body>
+</html>

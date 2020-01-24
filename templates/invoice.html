@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='expiration.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Cairo|Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='print.css') }}" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://printjs-4de6.kxcdn.com/print.min.css">
+    <title>Pharmacopeia</title>
+</head>
+<form action="/invoice" method="post">
+
+  <body>
+    <header>
+      <div class="header1">  
+          <h1><span>نظام إدارة صيدلية</span></h1> 
+      </div>
+      <div class="header2">
+          <h1><span>Pharmacopeia</span></h1>
+      </div>
+  </header>
+  <main>
+    <div class="sidebar">
+      <ul class="nav">
+          
+          <li><a  href="sales">
+              <span>فاتورة جديدة</span>
+  
+              <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 40" x="0px" y="0px"><title></title><g><path d="M26,31H6a1,1,0,0,1-1-.83l-4-23A1,1,0,0,1,2,6h8.09a1,1,0,0,1,0,2H3.19L6.84,29H25.16L28.81,8h-6.9a1,1,0,0,1,0-2H30a1,1,0,0,1,1,1.17l-4,23A1,1,0,0,1,26,31Z"/><path d="M21.91,8H10.09a1,1,0,0,1-.76-.35,1,1,0,0,1-.23-.81,7,7,0,0,1,13.8,0,1,1,0,0,1-.23.81A1,1,0,0,1,21.91,8ZM11.42,6h9.16a5,5,0,0,0-9.16,0Z"/><path d="M22,14H10a1,1,0,0,1,0-2H22a1,1,0,0,1,0,2Z"/><path d="M22,20H10a1,1,0,0,1,0-2H22a1,1,0,0,1,0,2Z"/></g><text x="0" y="47" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Bagus Kusnandar</text><text x="0" y="52" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+          </a>
+          </li>
+
+          <li>
+          <a href="activity">
+              <span>سجل النشاطات</span>
+              <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><title></title><rect x="6.14" y="69.46" width="87.71" height="3.67"/><rect x="6.14" y="45.49" width="87.71" height="3.67"/><path d="M66.43,23.21a16.45,16.45,0,0,1-.79,3.66H90.33V91.74H9.67V26.87H34.36a16.45,16.45,0,0,1-.79-3.66H6v72.2H94V23.21Z"/><path d="M66.46,23.21H63.17a13.24,13.24,0,0,1-26.34,0H33.54a16.51,16.51,0,0,0,32.92,0Z"/><path d="M66.46,45.49H63.17a13.24,13.24,0,0,1-26.34,0H33.54a16.51,16.51,0,0,0,32.92,0Z"/><path d="M66.46,69.74H63.17a13.24,13.24,0,0,1-26.34,0H33.54a16.51,16.51,0,0,0,32.92,0Z"/><polygon points="91.52 25.91 71.47 7.78 73.41 4.59 94 23.21 91.52 25.91"/><polygon points="8.48 25.91 6 23.21 26.59 4.59 28.53 7.78 8.48 25.91"/><polygon points="73.41 8.26 28 8.26 26.59 4.59 73.41 4.59 73.41 8.26"/><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Michael Mellon</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+          </a>
+          </li> 
+          
+
+          <li>
+          <a href="add_new_goods">
+               <span>ادخال عنصر الى المخزن</span>
+                      <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 80" x="0px" y="0px"><title></title><g data-name="Layer 2"><path d="M46.59,60.45h-42a1,1,0,0,1-1-1V6.89a1,1,0,0,1,1-1H18.76a1,1,0,0,1,1,1v6.36H31.39V6.89a1,1,0,0,1,1-1h14.2a1,1,0,0,1,1,1V59.45A1,1,0,0,1,46.59,60.45Zm-41-2h40V7.89H33.39v6.36a1,1,0,0,1-1,1H18.76a1,1,0,0,1-1-1V7.89H5.55Z"/><path d="M42.91,55.34H8.24a1,1,0,0,1-1-1V12a1,1,0,0,1,1-1H18.76a1,1,0,0,1,1,1v1.25H31.39V12a1,1,0,0,1,1-1H42.91a1,1,0,0,1,1,1V54.34A1,1,0,0,1,42.91,55.34Zm-33.67-2H41.91V13H33.39v1.25a1,1,0,0,1-1,1H18.76a1,1,0,0,1-1-1V13H9.24Z"/><path d="M32.39,15.25H18.76a1,1,0,0,1-1-1V4a1,1,0,0,1,1-1H32.39a1,1,0,0,1,1,1V14.25A1,1,0,0,1,32.39,15.25Zm-12.63-2H31.39V5H19.76Z"/><path d="M57,49.74H51.54a1,1,0,0,1-1-1V21.46a1,1,0,0,1,1-1H57a1,1,0,0,1,1,1V48.74A1,1,0,0,1,57,49.74Zm-4.46-2H56V22.46H52.54Z"/><path d="M57,22.46H51.54a1,1,0,0,1-1-1V18.73a3.73,3.73,0,1,1,7.46,0v2.73A1,1,0,0,1,57,22.46Zm-4.46-2H56V18.73a1.73,1.73,0,1,0-3.46,0Z"/><path d="M54.27,55.19a1,1,0,0,1-.9-.55l-2.73-5.45a1,1,0,1,1,1.79-.9L54.27,52l1.83-3.67a1,1,0,1,1,1.79.9l-2.73,5.45A1,1,0,0,1,54.27,55.19Z"/><path d="M60,29.66a1,1,0,0,1-1-1v-6.2H57a1,1,0,0,1,0-2h3a1,1,0,0,1,1,1v7.2A1,1,0,0,1,60,29.66Z"/><path d="M37.53,21h-24a1,1,0,1,1,0-2h24a1,1,0,0,1,0,2Z"/><path d="M37.53,30h-24a1,1,0,0,1,0-2h24a1,1,0,0,1,0,2Z"/><path d="M37.53,38.93h-24a1,1,0,0,1,0-2h24a1,1,0,0,1,0,2Z"/><path d="M27,47.89H13.55a1,1,0,1,1,0-2H27a1,1,0,0,1,0,2Z"/></g><text x="0" y="79" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by David Glöckler</text><text x="0" y="84" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+                   </a>
+          </li>
+
+          <li>
+          <a href="inventory">
+          
+              <span>المخزن</span>
+          <svg  xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 128 160" x="0px" y="0px"><title></title><path d="M26,91H62a6.0068,6.0068,0,0,0,6-6V59a6.0068,6.0068,0,0,0-6-6H26a6.0068,6.0068,0,0,0-6,6V85A6.0068,6.0068,0,0,0,26,91Zm23-4H39V80a5,5,0,0,1,10,0ZM24,59a2,2,0,0,1,2-2H62a2,2,0,0,1,2,2V85a2,2,0,0,1-2,2H53V80a9,9,0,0,0-18,0v7H26a2,2,0,0,1-2-2Z"/><path d="M78,100h24a6.0068,6.0068,0,0,0,6-6V50a6.0068,6.0068,0,0,0-6-6H78a6.0068,6.0068,0,0,0-6,6V94A6.0068,6.0068,0,0,0,78,100Zm10-4H84V92h4ZM76,50a2,2,0,0,1,2-2h24a2,2,0,0,1,2,2V60H92V56a4,4,0,0,0-4-4H84a4,4,0,0,0-4,4v4H76Zm12,6v4H84V56ZM76,64h28V80h-4V76a4,4,0,0,0-4-4H92a4,4,0,0,0-4,4v4H76ZM96,76v4H92V76ZM76,84h28V94a2,2,0,0,1-2,2H92V92a4,4,0,0,0-4-4H84a4,4,0,0,0-4,4v4H78a2,2,0,0,1-2-2Z"/><path d="M72.27271,13.09088h-.36365v-.36359A4.73261,4.73261,0,0,0,67.18182,8H62.81818a4.73261,4.73261,0,0,0-4.72723,4.72729v.36359h-.36365A4.73266,4.73266,0,0,0,53,17.81818v4.36365a4.73261,4.73261,0,0,0,4.72729,4.72723h.36365v.36365A4.73261,4.73261,0,0,0,62.81818,32h4.36365a4.73261,4.73261,0,0,0,4.72723-4.72729v-.36365h.36365A4.73261,4.73261,0,0,0,77,22.18182V17.81818A4.73266,4.73266,0,0,0,72.27271,13.09088ZM73,22.18182a.72724.72724,0,0,1-.72729.72723H68.63635a.72724.72724,0,0,0-.72723.72729v3.63635A.7273.7273,0,0,1,67.18182,28H62.81818a.72728.72728,0,0,1-.72723-.72729V23.63635a.7273.7273,0,0,0-.72729-.72729H57.72729A.72724.72724,0,0,1,57,22.18182V17.81818a.7273.7273,0,0,1,.72729-.72729h3.63635a.72724.72724,0,0,0,.72729-.72723V12.72729A.72728.72728,0,0,1,62.81818,12h4.36365a.7273.7273,0,0,1,.72729.72729v3.63635a.72719.72719,0,0,0,.72723.72723h3.63635A.7273.7273,0,0,1,73,17.81818Z"/><path d="M4,128H124a4,4,0,0,0,4-4v-2a7.0079,7.0079,0,0,0-7-7v-2c0-2.60443-1.7757-6.25745-5.00769-6.89355.001-.03595.00769-.07025.00769-.10645V40h6a6.0068,6.0068,0,0,0,6-6V6a6.0068,6.0068,0,0,0-6-6H6A6.0068,6.0068,0,0,0,0,6V34a6.0068,6.0068,0,0,0,6,6h6v66c0,.03619.00665.0705.00769.10645C8.7757,106.74255,7,110.39557,7,113v2a7.0079,7.0079,0,0,0-7,7v2A4,4,0,0,0,4,128ZM6,36a2,2,0,0,1-2-2V6A2,2,0,0,1,6,4H122a2,2,0,0,1,2,2V34a2,2,0,0,1-2,2Zm106,4v66H16V40ZM11,113c0-1.10461.89545-3,2-3H115c1.10455,0,2,1.89539,2,3v2H11Zm-7,9a3,3,0,0,1,3-3H121a3,3,0,0,1,3,3v2H4Z"/><text x="0" y="143" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by priyanka</text><text x="0" y="148" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+       </a>
+      </li>
+
+      
+          <li>
+          <a href="expire_date">
+              
+                  <span>الادوية منتهية الصلاحية</span>
+              <svg  xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 64 80" x="0px" y="0px"><title></title><path d="M45.668,37.6445h3.6367v3.6377a1,1,0,0,0,2,0V37.6445h3.6367a1,1,0,0,0,0-2H51.3047V32.0078a1,1,0,0,0-2,0v3.6367H45.668a1,1,0,0,0,0,2Z"/><path d="M10.9824,58.5049l-4.4092.7773a3.0007,3.0007,0,0,1-1.042-5.91l10.832-1.9092a2.9787,2.9787,0,0,1,2.5625.7549,1,1,0,0,0,1.3594-1.4668,4.9508,4.9508,0,0,0-4.2686-1.2578l-10.833,1.91a5.0012,5.0012,0,0,0,.8584,9.9258,5.0689,5.0689,0,0,0,.8789-.0781l4.4092-.7773a1,1,0,0,0-.3477-1.9687Z"/><path d="M56.4707,14.23V11.2046h2.5771a1,1,0,0,0,1-1V3a3.0033,3.0033,0,0,0-3-3H31.3594a3.0033,3.0033,0,0,0-3,3v7.2046a1,1,0,0,0,1,1H32.07v2.9971a7.624,7.624,0,0,0-6.6123,7.5469V54H18.6855a5,5,0,0,0,0,10h11a5.0084,5.0084,0,0,0,4.8989-4H60.7881a2.1622,2.1622,0,0,0,2.16-2.16V21.7485A7.6177,7.6177,0,0,0,56.4707,14.23ZM30.3594,9.2046V3a1.001,1.001,0,0,1,1-1H57.0479a1.001,1.001,0,0,1,1,1V9.2046H55.1V8.0928a1,1,0,0,0-2,0V9.2046H50.1514V8.0928a1,1,0,0,0-2,0V9.2046H45.2031V8.0928a1,1,0,0,0-2,0V9.2046H40.2549V8.0928a1,1,0,0,0-2,0V9.2046H35.3076V8.0928a1,1,0,0,0-2,0V9.2046H30.3594ZM29.6855,62h-11a3,3,0,0,1,0-6h11a3,3,0,0,1,0,6Zm31.1025-4H34.5845a5.0084,5.0084,0,0,0-4.8989-4H27.458V21.7485A5.6185,5.6185,0,0,1,33.07,16.1362h1V11.2046h20.4v2.9316H44.2031a1,1,0,1,0,0,2H55.3359a5.6185,5.6185,0,0,1,5.6123,5.6123V24.001H38.66a1,1,0,0,0-1,1V48.2891a.9994.9994,0,0,0,1,1H60.9482V57.84A.1609.1609,0,0,1,60.7881,58Zm.16-10.7109H39.66V26.001H60.9482Z"/><text x="0" y="79" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by Mooms</text><text x="0" y="84" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+           </a>
+          </li>
+
+          <li>
+          <a  href="logout">
+              <span>تسجيل خروج</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><polygon points="36,49 36,51 83,51 69.9,64.1 71.3,65.6 86.8,50 71.3,34.4 69.9,35.9 83,49  "/><polygon points="62,64 60,64 60,77 16,77 16,23 60,23 60,36 62,36 62,21 14,21 14,79 62,79  "/></g><text x="0" y="115" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">Created by praveen patchu</text><text x="0" y="120" fill="#000000" font-size="5px" font-weight="bold" font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif">from the Noun Project</text></svg>
+          </a>
+          </li>
+
+      </ul>
+  </div>
+      <div class="main-content">
+      <div id="app">
+        <h2>فاتورة</h2>
+
+            <div class="table" id="div_table">
+              <table>
+                <thead>
+                  <tr>
+                      <th name="sequence">التسلسل</th>
+                    <th name="medicine">اسم الدواء</th>
+                    <th name="quantity">العدد</th>
+                    <th name="price">السعر</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                    {% for row in query %}
+                      <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                        <td>{{ row[4] }}</td>
+
+                      </tr>
+                    {% endfor %}
+                </tbody>
+
+
+              </table>
+            <input type="button" id="div_print" value="Print">
+            </div>
+          </div>
+   
+              
+</div>
+  </main>
+  <script>
+        document.getElementById('div_print').addEventListener("click", print)
+
+        function print() {
+            printJS({
+                printable: 'div_table',
+                type: 'html',
+                targetStyles: ['*']
+            })
+        }
+    </script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+  </body>
+</form>
+    </html>
