@@ -81,7 +81,11 @@ def sales():
             for item in r:
                 if item not in l:
                     l.append(item)
-
+        f = open("medicines.txt", "r")
+        for item in l:
+            f.write(item)
+        f.close()
+        
         for r in quantity:
             for row in r:
                 final_quantity += row
